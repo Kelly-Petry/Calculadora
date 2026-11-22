@@ -3,7 +3,7 @@ const {chromium}=require('playwright');const fs=require('fs');
 const cards={
  'bf':{foto:['foto1','foto2'],kick:'',h1:'O brilho que você ama, com <em>oportunidades imperdíveis!</em>',p:'Nossa Black Friday já começou. Aproveite!',
        pos:{feed:{foto1:'55% 26%',foto2:'45% 32%'},stories:{foto1:'55% 50%',foto2:'45% 50%'}}},
- 'bf2':{foto:['foto3'],kick:'Não deixe para depois!',style:'overlay',h1:['A Black está','<em>acontecendo!</em>'],h1size:104,p:'Aproveite enquanto a oportunidade<br>está disponível.',
+ 'bf2':{foto:['foto3'],kick:'Não deixe para depois!',style:'overlay',h1:['A Black está','<em>acontecendo!</em>'],h1size:124,p:'Aproveite enquanto a oportunidade está disponível.',
        pos:{feed:{foto3:'50% 60%'},stories:{foto3:'10% 50%'}}},
 };
 const formats=[['feed','card.html',1350,''],['stories','story.html',1920,'-stories']];
@@ -17,7 +17,7 @@ for(const [name,c] of Object.entries(cards)){ if(only&&only!==name) continue;
    let html;
    if(c.style==='overlay'){
      html=fs.readFileSync('overlay.html','utf8').replace(/{{H}}/g,h).replace('{{FOTO}}',n+'.jpg').replace('{{POS}}',c.pos[fmt][n])
-      .replace('{{LOGOTOP}}',fmt==='feed'?56:230).replace('{{LOGOLEFT}}',fmt==='feed'?56:60).replace('{{BOTTOM}}',fmt==='feed'?70:330).replace('{{H1SIZE}}',c.h1size)
+      .replace('{{LOGOTOP}}',fmt==='feed'?56:230).replace('{{LOGOLEFT}}',fmt==='feed'?56:60).replace('{{BOTTOM}}',fmt==='feed'?230:560).replace('{{PSIZE}}',fmt==='feed'?30:32).replace('{{KSIZE}}',fmt==='feed'?26:28).replace('{{H1SIZE}}',c.h1size)
       .replace('{{KICK}}',c.kick?`<div class="kick"><span class="hl">${c.kick}</span></div>\n`:'')
       .replace('{{H1}}',c.h1.join('<br>')).replace('{{P}}',c.p);
    } else html=fs.readFileSync(file,'utf8').replace('FOTO',n+'.jpg').replace('var(--pos)',c.pos[fmt][n])
