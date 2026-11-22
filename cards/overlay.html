@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:{{H}}px;overflow:hidden;background:#000}
+.card{position:relative;width:1080px;height:{{H}}px}
+.photo{position:absolute;inset:0}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:{{POS}}}
+.logo{position:absolute;top:{{LOGOTOP}}px;left:{{LOGOLEFT}}px}
+.logo img{width:230px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}
+.content{position:absolute;left:300px;right:60px;bottom:{{BOTTOM}}px;text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:18px}
+.hl{background:#0f4a33;color:#f3ead8;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.kick .hl{font:500 22px/1 Montserrat;letter-spacing:.3em;text-transform:uppercase;color:#e3c787;padding:14px 18px 14px 24px}
+h1{font:400 {{H1SIZE}}px/1.02 'EB Garamond';letter-spacing:-.3px;color:#fbf5e9;text-shadow:0 2px 22px rgba(40,15,5,.7),0 1px 4px rgba(40,15,5,.6)}
+
+h1 em{font-style:italic;color:#fbf5e9}
+p{font:400 27px/1.8 Montserrat;max-width:620px}
+p .hl{padding:8px 20px}
+</style></head><body><div class="card">
+<div class="photo"><img src="{{FOTO}}"></div>
+<div class="logo"><img src="logo-zemora-creme.png"></div>
+<div class="content">
+{{KICK}}<h1>{{H1}}</h1>
+<p><span class="hl">{{P}}</span></p>
+</div>
+</div></body></html>
