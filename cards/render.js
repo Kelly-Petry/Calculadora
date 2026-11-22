@@ -5,6 +5,10 @@ const cards={
        pos:{feed:{foto1:'55% 26%',foto2:'45% 32%'},stories:{foto1:'55% 50%',foto2:'45% 50%'}}},
  'bf2':{foto:['foto3'],kick:'Não deixe para depois!',style:'overlay',h1:['A Black está','<em>acontecendo!</em>'],h1size:100,p:'Aproveite enquanto a oportunidade está disponível.',
        pos:{feed:{foto3:'50% 60%'},stories:{foto3:'10% 50%'}}},
+
+ 'bf4':{foto:['foto4'],style:'overlay',kick:'',h1:['Última chance de','garantir seu brilho!'],h1size:88,
+       p:'Não deixe seus acessórios favoritos ficarem para a próxima.<br>Aproveite enquanto dá tempo!',psize:{feed:26,stories:28},
+       top:{feed:110,stories:290},pos:{feed:{foto4:'50% 50%'},stories:{foto4:'45% 50%'}}},
 };
 const formats=[['feed','card.html',1350,''],['stories','story.html',1920,'-stories']];
 const only=process.argv[2];
@@ -17,7 +21,7 @@ for(const [name,c] of Object.entries(cards)){ if(only&&only!==name) continue;
    let html;
    if(c.style==='overlay'){
      html=fs.readFileSync('overlay.html','utf8').replace(/{{H}}/g,h).replace('{{FOTO}}',n+'.jpg').replace('{{POS}}',c.pos[fmt][n])
-      .replace('{{LOGOTOP}}',fmt==='feed'?60:300).replace('{{LOGOLEFT}}',fmt==='feed'?56:60).replace('{{BOTTOM}}',fmt==='feed'?250:600).replace('{{PSIZE}}',fmt==='feed'?30:32).replace('{{KSIZE}}',fmt==='feed'?26:28).replace('{{H1SIZE}}',c.h1size)
+      .replace('{{LOGOTOP}}',fmt==='feed'?60:300).replace('{{LOGOLEFT}}',fmt==='feed'?56:60).replace('{{VPOS}}',c.top?`top:${c.top[fmt]}px`:`bottom:${fmt==='feed'?250:600}px`).replace('{{PSIZE}}',c.psize?c.psize[fmt]:(fmt==='feed'?30:32)).replace('{{KSIZE}}',fmt==='feed'?26:28).replace('{{H1SIZE}}',c.h1size)
       .replace('{{KICK}}',c.kick?`<div class="kick"><span class="hl">${c.kick}</span></div>\n`:'')
       .replace('{{H1}}',c.h1.join('<br>')).replace('{{P}}',c.p);
    } else html=fs.readFileSync(file,'utf8').replace('FOTO',n+'.jpg').replace('var(--pos)',c.pos[fmt][n])

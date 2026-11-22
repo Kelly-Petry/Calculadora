@@ -8,13 +8,14 @@ body{width:1080px;height:{{H}}px;overflow:hidden;background:#000}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:{{POS}}}
 .logo{position:absolute;bottom:{{LOGOTOP}}px;left:0;right:0;text-align:center}
 .logo img{width:230px;filter:drop-shadow(0 2px 10px rgba(0,0,0,.35))}
-.content{position:absolute;left:60px;right:60px;bottom:{{BOTTOM}}px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px}
+.content{position:absolute;left:60px;right:60px;{{VPOS}};text-align:center;display:flex;flex-direction:column;align-items:center;gap:18px}
 .hl{background:#0f4a33;color:#f3ead8;display:inline;box-decoration-break:clone;-webkit-box-decoration-break:clone}
 .kick .hl{font:500 {{KSIZE}}px/1 Montserrat;letter-spacing:.3em;text-transform:uppercase;color:#e3c787;padding:14px 18px 14px 24px}
 h1{font:700 {{H1SIZE}}px/1.05 Montserrat;letter-spacing:-1px;color:#fbf5e9;text-shadow:0 2px 22px rgba(40,15,5,.7),0 1px 4px rgba(40,15,5,.6)}
 
 h1 em{font-style:normal;color:#fbf5e9}
 p{font:400 {{PSIZE}}px/1.8 Montserrat;white-space:nowrap}
+p .hl{line-height:1.9}
 p .hl{padding:8px 20px}
 </style></head><body><div class="card">
 <div class="photo"><img src="{{FOTO}}"></div>
