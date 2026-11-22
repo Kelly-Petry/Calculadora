@@ -17,7 +17,7 @@ for(const [name,c] of Object.entries(cards)){ if(only&&only!==name) continue;
    let html;
    if(c.style==='overlay'){
      html=fs.readFileSync('overlay.html','utf8').replace(/{{H}}/g,h).replace('{{FOTO}}',n+'.jpg').replace('{{POS}}',c.pos[fmt][n])
-      .replace('{{LOGOTOP}}',fmt==='feed'?56:230).replace('{{LOGOLEFT}}',fmt==='feed'?56:60).replace('{{BOTTOM}}',fmt==='feed'?230:560).replace('{{PSIZE}}',fmt==='feed'?30:32).replace('{{KSIZE}}',fmt==='feed'?26:28).replace('{{H1SIZE}}',c.h1size)
+      .replace('{{LOGOTOP}}',fmt==='feed'?60:300).replace('{{LOGOLEFT}}',fmt==='feed'?56:60).replace('{{BOTTOM}}',fmt==='feed'?250:600).replace('{{PSIZE}}',fmt==='feed'?30:32).replace('{{KSIZE}}',fmt==='feed'?26:28).replace('{{H1SIZE}}',c.h1size)
       .replace('{{KICK}}',c.kick?`<div class="kick"><span class="hl">${c.kick}</span></div>\n`:'')
       .replace('{{H1}}',c.h1.join('<br>')).replace('{{P}}',c.p);
    } else html=fs.readFileSync(file,'utf8').replace('FOTO',n+'.jpg').replace('var(--pos)',c.pos[fmt][n])
