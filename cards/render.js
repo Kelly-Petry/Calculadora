@@ -3,7 +3,7 @@ const {chromium}=require('playwright');const fs=require('fs');
 const cards={
  'bf':{foto:['foto1','foto2'],kick:'',h1:'O brilho que você ama, com <em>oportunidades imperdíveis!</em>',p:'Nossa Black Friday já começou. Aproveite!',
        pos:{feed:{foto1:'55% 26%',foto2:'45% 32%'},stories:{foto1:'55% 50%',foto2:'45% 50%'}}},
- 'bf2':{foto:['foto3'],kick:'Não deixe para depois!',style:'overlay',h1:['A Black está','<em>acontecendo!</em>'],h1size:124,p:'Aproveite enquanto a oportunidade está disponível.',
+ 'bf2':{foto:['foto3'],kick:'Não deixe para depois!',style:'overlay',h1:['A Black está','<em>acontecendo!</em>'],h1size:100,p:'Aproveite enquanto a oportunidade está disponível.',
        pos:{feed:{foto3:'50% 60%'},stories:{foto3:'10% 50%'}}},
 };
 const formats=[['feed','card.html',1350,''],['stories','story.html',1920,'-stories']];
