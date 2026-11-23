@@ -13,8 +13,15 @@ const sets={dp:[
  {n:3,logo:'logo-zemora-verde.png',foto:'ac-aneis-dourados.jpg',pos:'50% 55%',v:'top:-999px',ts:0,body:''},
  {n:4,logo:'logo-zemora-verde.png',foto:'ac-aneis-prata.jpg',pos:'50% 55%',v:'top:-999px',ts:0,body:''},
  {n:5,logo:'logo-zemora-verde.png',foto:'ac-tornozeleira.jpg',pos:'50% 50%',v:'bottom:70px',ts:0,body:`<span class="hl" style="font:600 34px/1 Montserrat;letter-spacing:.2em;padding:26px 44px 26px 50px">ACESSE O LINK DA BIO</span>`},
-]};
-const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios'}[set];const cards=sets[set];
+],
+ bf6:[
+ {n:1,logo:'logo-zemora-verde.png',foto:'bf6-pescoco.jpg',pos:'50% 35%',v:'top:180px',ts:112,body:`<h1 class="dark">Black Friday<br>Zemora</h1><div class="sub"><span>de 23 a 28/11</span></div>`},
+ {n:2,logo:'logo-zemora-verde.png',foto:'bf6-coracao.jpg',pos:'50% 50%',v:'top:180px',ts:96,body:`<h1 class="dark">Joias com<br>até 30% off</h1>`},
+ {n:3,logo:'logo-zemora-verde.png',foto:'bf6-argolas.jpg',pos:'50% 50%',v:'top:-999px',ts:0,body:''},
+ {n:4,logo:'logo-zemora-verde.png',foto:'bf6-arvore.jpg',pos:'50% 50%',img:'filter:blur(30px) brightness(1.02);transform:scale(1.15)',v:'top:-999px',ts:0,body:`<div style="position:fixed;left:0;bottom:0;width:1080px;height:1080px;background:url(bf6-arvore.jpg) center/cover;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 160px)"></div>`},
+ {n:5,logo:'logo-zemora-verde.png',foto:'bf6-arvore-pescoco.jpg',pos:'50% 100%',v:'bottom:80px',ts:0,body:`<div class="sub" style="font-weight:700;font-size:34px"><span>Garanta a sua:</span></div>`+chips('Shopee, TikTok Shop, Amazon, Mercado Livre')},
+ ]};
+const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios',bf6:'zemora-bf-ofertas'}[set];const cards=sets[set];
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});
 for(const c of cards){ if(process.argv[2]&&process.argv[2]!=='all'&&+process.argv[2]!==c.n) continue;
  const h=fs.readFileSync('carrossel.html','utf8').replace('{{POS}}',c.pos).replace('{{VPOS}}',c.v).replace('{{TS}}',c.ts).replace('{{FOTO}}',c.foto).replace('{{BODY}}',c.body).replace('{{IMGSTYLE}}',c.img||'').replace('{{LOGO}}',c.logo||'logo-zemora-creme.png');
