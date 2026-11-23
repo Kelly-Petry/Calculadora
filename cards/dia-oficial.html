@@ -10,11 +10,10 @@ body{width:1080px;height:{{H}}px;overflow:hidden;background:#ece8e2;color:#0f4a3
 .badge{position:absolute;left:{{BL}}px;top:{{BT}}px;background:#0f4a33;padding:{{BP}}px {{BPX}}px;box-shadow:0 10px 26px rgba(15,74,51,.35)}
 .badge img{display:block;width:{{LW}}px}
 .row{display:flex;justify-content:flex-end;margin-top:{{G2}}px}
-.sub{text-align:right;font:400 {{SS}}px/1.15 Montserrat;color:#0f4a33}
+.sub{position:relative;z-index:2;text-align:right;font:400 {{SS}}px/1.15 Montserrat;color:#0f4a33}
 .sub b{font-weight:800}
 .ph{position:relative;flex:1;margin-top:{{G3}}px;min-height:0}
-.ph .img{position:absolute;inset:0;border-radius:22px;overflow:hidden}
-.ph img{width:100%;height:100%;object-fit:cover;object-position:{{POS}}}
+.ph .cut{position:absolute;left:-95px;top:0;height:100%;width:auto;filter:drop-shadow(0 18px 30px rgba(15,40,30,.18))}
 .ring{position:absolute;width:{{RW}}px;height:{{RW}}px;left:-34px;top:-{{RT}}px;border-radius:50%;background:#0f4a33;box-shadow:0 8px 24px rgba(0,0,0,.25)}
 .ring svg{width:100%;height:100%}
 .ring text{font:500 17px Montserrat;fill:#f3ead8}
@@ -23,7 +22,7 @@ body{width:1080px;height:{{H}}px;overflow:hidden;background:#ece8e2;color:#0f4a3
 <div class="kick">HOJE É O DIA OFICIAL DA</div>
 <div class="big"><span>BLACK</span><span>FRIDAY</span></div>
 <div class="row"><div class="sub">As melhores<br><b>ofertas Zemora</b><br>estão te esperando</div></div>
-<div class="ph"><div class="img"><img src="foto4.jpg"></div>
+<div class="ph"><img class="cut" src="mao-recortada.png">
 </div>
 <div class="foot"><img src="logo-zemora-verde.png"></div>
 </div></body></html>
