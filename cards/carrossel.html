@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1350px;overflow:hidden;background:#000}
+.photo{position:absolute;inset:0}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:{{POS}}}
+.logo{position:absolute;top:54px;left:0;right:0;text-align:center}
+.logo img{width:180px}
+.content{position:absolute;left:70px;right:70px;{{VPOS}};text-align:center;display:flex;flex-direction:column;align-items:center;gap:22px}
+h1{font:800 {{TS}}px/1.02 Montserrat;letter-spacing:-2px;color:#fbf5e9;text-shadow:0 2px 24px rgba(20,10,5,.55),0 1px 4px rgba(20,10,5,.5)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;max-width:880px}
+.hl{background:#0f4a33;color:#f3ead8;font:500 30px/1 Montserrat;padding:16px 26px}
+.sub{font:500 30px/1.9 Montserrat;color:#f3ead8}
+.sub span{background:#0f4a33;padding:10px 22px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.emoji{font-family:'Noto Color Emoji';text-shadow:none}
+</style></head><body>
+<div class="photo"><img src="{{FOTO}}"></div>
+<div class="content">{{BODY}}</div>
+<div class="logo"><img src="{{LOGO}}"></div>
+</body></html>
