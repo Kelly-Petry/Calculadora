@@ -12,7 +12,7 @@ const sets={dp:[
  {n:2,logo:'logo-zemora-verde.png',foto:'ac-colar.jpg',pos:'50% 50%',v:'top:-999px',ts:0,body:''},
  {n:3,logo:'logo-zemora-verde.png',foto:'ac-aneis-dourados.jpg',pos:'50% 55%',v:'top:-999px',ts:0,body:''},
  {n:4,logo:'logo-zemora-verde.png',foto:'ac-aneis-prata.jpg',pos:'50% 55%',v:'top:-999px',ts:0,body:''},
- {n:5,logo:'logo-zemora-verde.png',foto:'ac-tornozeleira.jpg',pos:'50% 50%',v:'top:-999px',ts:0,body:''},
+ {n:5,logo:'logo-zemora-verde.png',foto:'ac-tornozeleira.jpg',pos:'50% 50%',v:'bottom:70px',ts:0,body:`<span class="hl" style="font:600 34px/1 Montserrat;letter-spacing:.2em;padding:26px 44px 26px 50px">ACESSE O LINK DA BIO</span>`},
 ]};
 const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios'}[set];const cards=sets[set];
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});
