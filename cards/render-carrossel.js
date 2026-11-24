@@ -23,6 +23,7 @@ const sets={dp:[
  ],
  precos:[
  {n:1,logo:'logo-zemora-verde.png',foto:'preco-1.jpg',pos:'50% 45%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 42,90</span>`},
+ {n:2,logo:'logo-zemora-verde.png',foto:'preco-2.jpg',pos:'50% 50%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 52,90</span>`},
  ]};
 const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios',bf6:'zemora-bf-ofertas',precos:'zemora-precos'}[set];const cards=sets[set];
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});
