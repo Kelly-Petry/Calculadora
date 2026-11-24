@@ -20,8 +20,11 @@ const sets={dp:[
  {n:3,logo:'logo-zemora-verde.png',foto:'bf6-argolas.jpg',pos:'50% 50%',v:'top:-999px',ts:0,body:''},
  {n:4,logo:'logo-zemora-verde.png',foto:'bf6-arvore.jpg',pos:'50% 50%',img:'filter:blur(30px) brightness(1.02);transform:scale(1.15)',v:'top:-999px',ts:0,body:`<div style="position:fixed;left:0;bottom:0;width:1080px;height:1080px;background:url(bf6-arvore.jpg) center/cover;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 160px)"></div>`},
  {n:5,logo:'logo-zemora-verde.png',foto:'bf6-arvore-pescoco.jpg',pos:'50% 100%',v:'bottom:80px',ts:0,body:`<div class="kick-thin" style="color:#0f4a33">GARANTA A SUA</div><div class="thin-chips">`+chips('Shopee, TikTok Shop, Amazon, Mercado Livre')+`</div>`},
+ ],
+ precos:[
+ {n:1,logo:'logo-zemora-verde.png',foto:'preco-1.jpg',pos:'50% 45%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 42,90</span>`},
  ]};
-const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios',bf6:'zemora-bf-ofertas'}[set];const cards=sets[set];
+const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios',bf6:'zemora-bf-ofertas',precos:'zemora-precos'}[set];const cards=sets[set];
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});
 for(const c of cards){ if(process.argv[2]&&process.argv[2]!=='all'&&+process.argv[2]!==c.n) continue;
  const h=fs.readFileSync('carrossel.html','utf8').replace('{{POS}}',c.pos).replace('{{VPOS}}',c.v).replace('{{TS}}',c.ts).replace('{{FOTO}}',c.foto).replace('{{BODY}}',c.body).replace('{{IMGSTYLE}}',c.img||'').replace('{{LOGO}}',c.logo||'logo-zemora-creme.png');
