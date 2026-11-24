@@ -31,8 +31,8 @@ const sets={dp:[
  ],
  final:[
  {n:1,logo:'logo-zemora-verde.png',foto:'bf6-pescoco.jpg',pos:'50% 35%',v:'bottom:110px',ts:110,body:`<h1 class="dark thin">Black Friday<br><b>Zemora</b></h1><div class="sub thin-sub"><span>de 23 a 28 de novembro</span></div>`},
- {n:2,foto:'bf6-coracao.jpg',pos:'50% 50%',img:'position:absolute;left:0;top:270px;width:1080px;height:1080px;object-fit:cover',v:'top:0',ts:0,body:`<style>.logo{top:100px}.logo img{width:220px}</style><div class=\"corner\">Joias com<br><b>30% de desconto</b></div>`},
- {n:3,foto:'bf6-argolas.jpg',pos:'50% 50%',img:'position:absolute;left:0;top:270px;width:1080px;height:1080px;object-fit:cover',v:'top:0',ts:0,body:`<style>.logo{top:100px}.logo img{width:220px}</style><div class=\"corner\">Joias com<br><b>30% de desconto</b></div>`},
+ {n:2,logo:'logo-zemora-verde.png',foto:'bf6-coracao.jpg',pos:'50% 50%',v:'top:0',ts:0,body:`<div class=\"corner\">Joias com<br><b>30% de desconto</b></div>`},
+ {n:3,logo:'logo-zemora-verde.png',foto:'bf6-argolas.jpg',pos:'50% 50%',v:'top:0',ts:0,body:`<div class=\"corner\">Joias com<br><b>30% de desconto</b></div>`},
  {n:4,logo:'logo-zemora-verde.png',foto:'bf6-arvore-limpa.jpg',pos:'92% 50%',v:'top:0',ts:0,body:`<div class=\"corner\">Joias com<br><b>30% de desconto</b></div>`},
  ]};
 const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios',bf6:'zemora-bf-ofertas',precos:'zemora-precos',final:'zemora-bf-final'}[set];const cards=sets[set];
