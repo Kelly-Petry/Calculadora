@@ -18,7 +18,7 @@ const sets={dp:[
  {n:1,logo:'logo-zemora-verde.png',foto:'bf6-pescoco.jpg',pos:'50% 35%',v:'top:175px',ts:104,body:`<div class="kick-thin">BLACK FRIDAY ZEMORA</div><h1 class="dark thin">Joias com<br>até <b>30% off</b></h1><div class="sub thin-sub"><span>de 23 a 28/11</span></div>`},
  {n:2,logo:'logo-zemora-verde.png',foto:'bf6-coracao.jpg',pos:'50% 50%',v:'top:-999px',ts:0,body:''},
  {n:3,logo:'logo-zemora-verde.png',foto:'bf6-argolas.jpg',pos:'50% 50%',v:'top:-999px',ts:0,body:''},
- {n:4,logo:'logo-zemora-verde.png',foto:'bf6-arvore.jpg',pos:'50% 50%',img:'filter:blur(30px) brightness(1.02);transform:scale(1.15)',v:'top:-999px',ts:0,body:`<div style="position:fixed;left:0;bottom:0;width:1080px;height:1080px;background:url(bf6-arvore.jpg) center/cover;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 160px)"></div>`},
+ {n:4,logo:'logo-zemora-verde.png',foto:'bf6-arvore-limpa.jpg',pos:'92% 50%',v:'top:-999px',ts:0,body:''},
  {n:5,logo:'logo-zemora-verde.png',foto:'bf6-arvore-pescoco.jpg',pos:'50% 100%',v:'bottom:80px',ts:0,body:`<div class="kick-thin" style="color:#0f4a33">GARANTA A SUA</div><div class="thin-chips">`+chips('Shopee, TikTok Shop, Amazon, Mercado Livre')+`</div>`},
  ],
  precos:[
