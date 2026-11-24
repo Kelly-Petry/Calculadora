@@ -30,7 +30,7 @@ const sets={dp:[
  {n:6,foto:'preco-cta.jpg',pos:'50% 50%',v:'bottom:110px',ts:0,body:`<span class="hl" style="font:600 34px/1 Montserrat;letter-spacing:.2em;padding:26px 44px 26px 50px">ACESSE O LINK DA BIO</span>`},
  ],
  final:[
- {n:1,logo:'logo-zemora-verde.png',foto:'bf6-pescoco.jpg',pos:'50% 35%',v:'top:190px',ts:110,body:`<h1 class="dark thin">Black Friday<br><b>Zemora</b></h1><div class="sub thin-sub"><span>de 23 a 28 de novembro</span></div>`},
+ {n:1,logo:'logo-zemora-verde.png',foto:'bf6-pescoco.jpg',pos:'50% 35%',v:'bottom:110px',ts:110,body:`<h1 class="dark thin">Black Friday<br><b>Zemora</b></h1><div class="sub thin-sub"><span>de 23 a 28 de novembro</span></div>`},
  ]};
 const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios',bf6:'zemora-bf-ofertas',precos:'zemora-precos',final:'zemora-bf-final'}[set];const cards=sets[set];
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});
