@@ -22,10 +22,11 @@ const sets={dp:[
  {n:5,logo:'logo-zemora-verde.png',foto:'bf6-arvore-pescoco.jpg',pos:'50% 100%',v:'bottom:80px',ts:0,body:`<div class="kick-thin" style="color:#0f4a33">GARANTA A SUA</div><div class="thin-chips">`+chips('Shopee, TikTok Shop, Amazon, Mercado Livre')+`</div>`},
  ],
  precos:[
- {n:1,logo:'logo-zemora-verde.png',foto:'preco-1.jpg',pos:'50% 45%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 42,90</span>`},
- {n:2,logo:'logo-zemora-verde.png',foto:'preco-2.jpg',pos:'50% 50%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 52,90</span>`},
- {n:3,logo:'logo-zemora-verde.png',foto:'preco-3.jpg',pos:'50% 50%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 75,90</span>`},
- {n:4,foto:'preco-4.jpg',pos:'50% 50%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 45,90</span>`},
+ {n:1,logo:'logo-zemora-verde.png',foto:'ac-aneis-prata.jpg',pos:'50% 55%',v:'top:50%;transform:translateY(-50%)',ts:0,body:`<div class="midbox">Encontre o presente perfeito<br>por menos de <b>R$ 100,00</b></div>`},
+ {n:2,logo:'logo-zemora-verde.png',foto:'preco-1.jpg',pos:'50% 45%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 42,90</span>`},
+ {n:3,logo:'logo-zemora-verde.png',foto:'preco-2.jpg',pos:'50% 50%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 52,90</span>`},
+ {n:4,logo:'logo-zemora-verde.png',foto:'preco-3.jpg',pos:'50% 50%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 75,90</span>`},
+ {n:5,foto:'preco-4.jpg',pos:'50% 50%',v:'bottom:110px',ts:0,body:`<span class="price">R$ 45,90</span>`},
  ]};
 const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios',bf6:'zemora-bf-ofertas',precos:'zemora-precos'}[set];const cards=sets[set];
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});
