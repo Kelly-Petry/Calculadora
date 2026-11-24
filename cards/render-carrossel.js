@@ -34,6 +34,7 @@ const sets={dp:[
  {n:2,logo:'logo-zemora-verde.png',foto:'bf6-coracao.jpg',pos:'50% 50%',v:'top:0',ts:0,body:`<div class=\"corner\">Joias com<br><b>30% de desconto</b></div>`},
  {n:3,logo:'logo-zemora-verde.png',foto:'bf6-argolas.jpg',pos:'50% 50%',v:'top:0',ts:0,body:`<div class=\"corner\">Joias com<br><b>30% de desconto</b></div>`},
  {n:4,logo:'logo-zemora-verde.png',foto:'bf6-arvore-limpa.jpg',pos:'92% 50%',v:'top:0',ts:0,body:`<div class=\"corner\">Joias com<br><b>30% de desconto</b></div>`},
+ {n:5,logo:'logo-zemora-verde.png',foto:'bf6-arvore-pescoco.jpg',pos:'50% 100%',v:'bottom:90px',ts:64,body:`<h1 class="dark thin">Aproveite e garanta<br>a sua <b>joia favorita</b></h1><span class="hl" style="font:600 30px/1 Montserrat;letter-spacing:.2em;padding:24px 40px 24px 46px;margin-top:10px">ACESSE O LINK DA BIO</span>`},
  ]};
 const set=process.argv[3]||'dp';const prefix={dp:'zemora-dourado-prata',ac:'zemora-acessorios',bf6:'zemora-bf-ofertas',precos:'zemora-precos',final:'zemora-bf-final'}[set];const cards=sets[set];
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});
